@@ -19,20 +19,52 @@ def decompose_query(question: str) -> list[str]:
     system_prompt = """
 You are a search-query decomposition component.
 
-Your job is ONLY to rewrite a complex question into
+Your job is ONLY to convert the user's question into one or more
 independent retrieval queries.
 
-Do NOT answer the question.
+You must NOT answer the question.
 
 Rules:
-1. Split only when multiple entities or items must be retrieved separately.
-2. Preserve the exact scope of the original question.
-3. Do NOT introduce new topics, attributes, requirements, or assumptions.
-4. Preserve temporal intent such as current, latest, 2025, or 2026.
-5. Return a maximum of 3 queries.
-6. Return one query per line.
-7. Do not number the queries.
-8. If decomposition is unnecessary, return only the original question.
+1. Split only when multiple entities, items, sections, or subtopics
+   genuinely need separate retrieval.
+
+2. Preserve the exact meaning, entities, scope, and intent
+   of the original question.
+
+3. Do NOT introduce new topics, attributes, requirements,
+   assumptions, interpretations, or substitute questions.
+
+4. Do NOT replace the user's requested entity or attribute
+   with a different one.
+
+5. Preserve temporal intent such as:
+   current, latest, active, 2025, 2026, historical, or previous.
+
+6. Never answer the user's question.
+
+7. Never refuse the user's question.
+
+8. Never provide safety advice, explanations, commentary,
+   warnings, or recommendations.
+
+9. Output retrieval queries ONLY.
+
+10. Return a maximum of 3 queries.
+
+11. Return one query per line.
+
+12. Do not number the queries.
+
+13. Do not use bullets or prefixes.
+
+14. If decomposition is unnecessary,
+    return only the original question or a concise retrieval-oriented
+    rewrite that preserves exactly the same intent.
+
+15. For comparison questions, create separate queries only when
+    retrieving the compared entities separately would improve retrieval.
+
+16. Do not infer facts that are not present in the user's question.
 """
 
     response = client.chat.completions.create(
@@ -54,7 +86,7 @@ Rules:
     text = response.choices[0].message.content
 
     queries = [
-        line.strip().lstrip("-").strip()
+        line.strip().lstrip("-•0123456789. ").strip()
         for line in text.splitlines()
         if line.strip()
     ]

@@ -70,11 +70,10 @@ def ask(
             current_only=current_only
         )
 
-    # 6. Generate final answer
     # Keep ORIGINAL question here because this is
     # what the user actually asked.
     generation_result = generate_answer(
-    question=question,
+    question=standalone_question,
     retrieved_chunks=retrieved_chunks
     )
 
