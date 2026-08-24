@@ -1,0 +1,247 @@
+[
+  {
+    "id": "Q01",
+    "question": "What is the client meal reimbursement limit?",
+    "expected_answer": "The client meal reimbursement limit is $100 per person.",
+    "expected_document": "ExpensePolicy.pdf",
+    "expected_section": "3. Expense Categories & Limits",
+    "type": "simple"
+  },
+
+  {
+    "id": "Q02",
+    "question": "What is the team meal reimbursement limit?",
+    "expected_answer": "The team meals or offsites limit is $75 per person.",
+    "expected_document": "ExpensePolicy.pdf",
+    "expected_section": "3. Expense Categories & Limits",
+    "type": "simple"
+  },
+
+  {
+    "id": "Q03",
+    "question": "Who needs to approve a client meal above the standard limit?",
+    "expected_answer": "A Director must approve client meal expenses above the standard limit.",
+    "expected_document": "ExpensePolicy.pdf",
+    "expected_section": "3. Expense Categories & Limits",
+    "type": "simple"
+  },
+
+  {
+    "id": "Q04",
+    "question": "Who needs to approve a team meal above the reimbursement limit?",
+    "expected_answer": "A Manager must approve team meal or offsite expenses above the limit.",
+    "expected_document": "ExpensePolicy.pdf",
+    "expected_section": "3. Expense Categories & Limits",
+    "type": "simple"
+  },
+
+  {
+    "id": "Q05",
+    "question": "When is an itemized receipt required for an expense?",
+    "expected_answer": "An itemized receipt is required for any single expense of $25 or more.",
+    "expected_document": "ExpensePolicy.pdf",
+    "expected_section": "5. Receipt Requirements",
+    "type": "simple"
+  },
+
+  {
+    "id": "Q06",
+    "question": "What information must a meal receipt include?",
+    "expected_answer": "Meal documentation should include the itemized order, business purpose, and names of attendees.",
+    "expected_document": "ExpensePolicy.pdf",
+    "expected_section": "5. Receipt Requirements",
+    "type": "simple"
+  },
+
+  {
+    "id": "Q07",
+    "question": "How much tuition reimbursement can employees receive?",
+    "expected_answer": "Employees may receive up to $5,250 per calendar year for eligible job-related coursework and certifications.",
+    "expected_document": "Benefits.pdf",
+    "expected_section": "6. Tuition Reimbursement",
+    "type": "simple"
+  },
+
+  {
+    "id": "Q08",
+    "question": "What conditions apply to tuition reimbursement?",
+    "expected_answer": "The course must be pre-approved by the employee's manager and People Operations, and the employee must achieve at least a B or Pass for pass/fail coursework.",
+    "expected_document": "Benefits.pdf",
+    "expected_section": "6. Tuition Reimbursement",
+    "type": "simple"
+  },
+
+  {
+    "id": "Q09",
+    "question": "What is the current OrbitSuite pricing?",
+    "expected_answer": "The current 2026 rate card lists Starter at $32, Professional at $65, Enterprise at $109, and Enterprise Plus at $145 per seat per month.",
+    "expected_document": "Pricing2026.pdf",
+    "expected_section": "3. Subscription Tiers",
+    "type": "version_conflict"
+  },
+
+  {
+    "id": "Q10",
+    "question": "What was OrbitSuite Starter pricing in 2025?",
+    "expected_answer": "The 2025 OrbitSuite Starter price was $29 per seat per month.",
+    "expected_document": "Pricing2025.pdf",
+    "expected_section": "2. Subscription Tiers",
+    "type": "historical"
+  },
+
+  {
+    "id": "Q11",
+    "question": "What is the current OrbitSuite Enterprise price?",
+    "expected_answer": "The current Enterprise price is $109 per seat per month.",
+    "expected_document": "Pricing2026.pdf",
+    "expected_section": "3. Subscription Tiers",
+    "type": "version_conflict"
+  },
+
+  {
+    "id": "Q12",
+    "question": "What happens to customers who already have an active 2025 OrbitSuite contract?",
+    "expected_answer": "Customers on active 2025 contracts retain their contracted rate until their renewal date.",
+    "expected_document": "Pricing2026.pdf",
+    "expected_section": "1. Overview",
+    "type": "version_conflict"
+  },
+
+  {
+    "id": "Q13",
+    "question": "Compare the Starter and Enterprise OrbitSuite plans.",
+    "expected_answer": "Starter is $32 per seat per month with a 5-seat minimum and email support. Enterprise is $109 per seat per month with a 25-seat minimum and a dedicated CSM with a 4-hour SLA.",
+    "expected_document": "Pricing2026.pdf",
+    "expected_section": "3. Subscription Tiers",
+    "type": "multi_section"
+  },
+
+  {
+    "id": "Q14",
+    "question": "Compare Starter and Enterprise API access, SSO, and uptime SLA.",
+    "expected_answer": "Starter has limited API access, no SSO, and a 99.5% uptime SLA. Enterprise has unlimited API access, SSO, and a 99.9% uptime SLA.",
+    "expected_document": "Pricing2026.pdf",
+    "expected_section": "4. Tier Feature Comparison",
+    "type": "multi_section"
+  },
+
+  {
+    "id": "Q15",
+    "question": "Compare the expense rules for client meals and team meals.",
+    "expected_answer": "Client meals have a $100 per-person limit with Director approval above the limit, while team meals have a $75 per-person limit with Manager approval above the limit.",
+    "expected_document": "ExpensePolicy.pdf",
+    "expected_section": "3. Expense Categories & Limits",
+    "type": "multi_section"
+  },
+
+  {
+    "id": "Q16",
+    "question": "Explain both the meal reimbursement limits and the receipt requirements.",
+    "expected_answer": "Client meals are limited to $100 per person and team meals to $75 per person. Itemized receipts are required for expenses of $25 or more, and meal receipts need the itemized order, business purpose, and attendee names.",
+    "expected_document": "ExpensePolicy.pdf",
+    "expected_section": "3. Expense Categories & Limits",
+    "type": "multi_section"
+  },
+
+  {
+    "id": "Q17",
+    "question": "Does the company provide free Netflix subscriptions to employees?",
+    "expected_answer": null,
+    "expected_document": null,
+    "expected_section": null,
+    "type": "no_answer"
+  },
+
+  {
+    "id": "Q18",
+    "question": "Does the company reimburse employees for Spotify Premium?",
+    "expected_answer": null,
+    "expected_document": null,
+    "expected_section": null,
+    "type": "no_answer"
+  },
+
+  {
+    "id": "Q19",
+    "question": "What is the CEO's home address?",
+    "expected_answer": null,
+    "expected_document": null,
+    "expected_section": null,
+    "type": "no_answer"
+  },
+
+  {
+    "id": "Q20",
+    "question": "What is the limit?",
+    "expected_answer": null,
+    "expected_document": null,
+    "expected_section": null,
+    "type": "ambiguous"
+  },
+
+  {
+    "id": "Q21",
+    "question": "What is the policy?",
+    "expected_answer": null,
+    "expected_document": null,
+    "expected_section": null,
+    "type": "ambiguous"
+  },
+
+  {
+    "id": "Q22",
+    "question": "What about Starter?",
+    "history": [
+      {
+        "role": "user",
+        "content": "What is the Enterprise OrbitSuite pricing?"
+      },
+      {
+        "role": "assistant",
+        "content": "The Enterprise plan costs $109 per seat per month."
+      }
+    ],
+    "expected_answer": "The Starter plan costs $32 per seat per month.",
+    "expected_document": "Pricing2026.pdf",
+    "expected_section": "3. Subscription Tiers",
+    "type": "follow_up"
+  },
+
+  {
+    "id": "Q23",
+    "question": "What is its support level?",
+    "history": [
+      {
+        "role": "user",
+        "content": "Tell me about the OrbitSuite Enterprise plan."
+      },
+      {
+        "role": "assistant",
+        "content": "The Enterprise plan costs $109 per seat per month with a 25-seat minimum."
+      }
+    ],
+    "expected_answer": "The Enterprise plan includes a dedicated CSM and a 4-hour SLA.",
+    "expected_document": "Pricing2026.pdf",
+    "expected_section": "3. Subscription Tiers",
+    "type": "follow_up"
+  },
+
+  {
+    "id": "Q24",
+    "question": "Who approves it if I go above that amount?",
+    "history": [
+      {
+        "role": "user",
+        "content": "What is the client meal reimbursement limit?"
+      },
+      {
+        "role": "assistant",
+        "content": "The client meal reimbursement limit is $100 per person."
+      }
+    ],
+    "expected_answer": "A Director must approve client meal expenses above the limit.",
+    "expected_document": "ExpensePolicy.pdf",
+    "expected_section": "3. Expense Categories & Limits",
+    "type": "follow_up"
+  }
+]

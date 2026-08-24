@@ -1,0 +1,165 @@
+
+STANDALONE QUESTION: What is the client meal reimbursement limit?
+
+SEARCH QUERIES: ['What is the client meal reimbursement limit?']
+
+======================================================================
+Q01 What is the client meal reimbursement limit?
+Answer: The client meal reimbursement limit is $100 per person. Approval is required from a Director for amounts above that limit [SOURCE_1].
+Latency: 16.77 sec
+Correctness: 2 / 2
+Grounding: 2 / 2
+Citation correctness: 2 / 2
+
+STANDALONE QUESTION: What is the team meal reimbursement limit?
+
+SEARCH QUERIES: ['What is the team meal reimbursement limit?']
+
+======================================================================
+Q02 What is the team meal reimbursement limit?
+Answer: The team meal reimbursement limit is $75 per person [SOURCE_1].
+Latency: 9.63 sec
+Correctness: 2 / 2
+Grounding: 2 / 2
+Citation correctness: 2 / 2
+
+STANDALONE QUESTION: What is the current OrbitSuite pricing?
+
+SEARCH QUERIES: ['What is the current OrbitSuite pricing?']
+
+======================================================================
+Q03 What is the current OrbitSuite pricing?
+Answer: - Effective date: rate card effective for contracts signed on/after Jan 1, 2026 (customers on active 2025 contracts keep their contracted rate) [SOURCE_1].
+
+- List price (per seat / month) and minimum seats / support level:
+  - Starter — $32 / seat / month; minimum 5 seats; Email, 2-business-day SLA [SOURCE_3].
+  - Professional — $65 / seat / month; minimum 10 seats; Email + chat, next-business-day SLA [SOURCE_3].
+  - Enterprise — $109 / seat / month; minimum 25 seats; Dedicated CSM, 4-hour SLA [SOURCE_3].
+  - Enterprise Plus — $145 / seat / month; minimum 100 seats; Dedicated CSM + TAM, 1-hour SLA [SOURCE_3].
+
+- Discounts: volume and term discounts may apply (volume tiers and percent discounts shown in the discount schedule; e.g., 25–49 seats = 5% off, 100–249 seats = 15% off, up to 25% for 500+ seats). Combined discounts are capped at 40% without CFO exception. Example: 150 seats, annual prepaid, combined 30% discount yields $45.50 / seat / month from a $65 list reference in the schedule [SOURCE_4].
+Latency: 13.89 sec
+Correctness: 2 / 2
+Grounding: 2 / 2
+Citation correctness: 2 / 2
+
+STANDALONE QUESTION: Compare the Starter and Enterprise OrbitSuite plans.
+
+SEARCH QUERIES: ['Starter OrbitSuite plan', 'Enterprise OrbitSuite plan']
+
+======================================================================
+Q04 Compare the Starter and Enterprise OrbitSuite plans.
+Answer: Summary comparison — Starter vs Enterprise (OrbitSuite)
+
+Pricing & seats
+- Starter: $32 per seat/month, minimum 5 seats [SOURCE_1].
+- Enterprise: $109 per seat/month, minimum 25 seats [SOURCE_1].
+
+Support & SLA
+- Starter: Email support with a 2-business-day response SLA; uptime SLA 99.5% [SOURCE_1][SOURCE_2].
+- Enterprise: Dedicated CSM with a 4-hour response SLA; uptime SLA 99.9% [SOURCE_1][SOURCE_2].
+
+Core features & access
+- Both include core workflow automation [SOURCE_2].
+- API access: Starter limited to 1k calls/month; Enterprise offers unlimited calls [SOURCE_2].
+- Single sign-on (SSO): Starter — No; Enterprise — Yes [SOURCE_2].
+- Custom reporting: Starter — No; Enterprise — Yes [SOURCE_2].
+
+Security / compliance & deployment
+- Audit logs & data residency: Starter — No; Enterprise — Yes [SOURCE_2].
+- Multi-region deployment: Neither Starter nor Enterprise supports multi-region deployment (Enterprise Plus only) [SOURCE_2].
+
+If you want a specific side-by-side table or only key differences highlighted, I can provide that.
+Latency: 16.61 sec
+Correctness: 2 / 2
+Grounding: 2 / 2
+Citation correctness: 2 / 2
+
+STANDALONE QUESTION: Compare the expense rules for client meals and team meals.
+
+SEARCH QUERIES: ['Expense rules for client meals', 'Expense rules for team meals']
+
+======================================================================
+Q05 Compare the expense rules for client meals and team meals.
+Answer: - Limits and approvals:
+  - Client meals: up to $100 per person; approvals above that require a Director [SOURCE_1].
+  - Team meals / offsites: up to $75 per person; approvals above that require a Manager [SOURCE_1].
+
+- Common rules that apply to both:
+  - Itemized receipt required for any single meal expense of $25 or more; meal receipts must show the itemized order, business purpose, and names of attendees [SOURCE_2].
+  - For travel, employees may use actual-cost reimbursement (with itemized receipts) or a standard per-diem rate but may not mix methods within a single trip (applies to meals & incidentals) [SOURCE_3].
+Latency: 15.05 sec
+Correctness: 2 / 2
+Grounding: 2 / 2
+Citation correctness: 2 / 2
+
+STANDALONE QUESTION: Does the company provide free Netflix subscriptions to employees?
+
+SEARCH QUERIES: ['Does the company provide free Netflix subscriptions to employees?']
+
+======================================================================
+Q06 Does the company provide free Netflix subscriptions to employees?
+Answer: No. Personal streaming subscriptions (e.g., Netflix) are explicitly listed as non-reimbursable under the travel policy [SOURCE_1].
+Latency: 12.69 sec
+No-answer behavior: FAIL
+
+STANDALONE QUESTION: What is the limit?
+
+======================================================================
+Q07 What is the limit?
+Answer: Could you clarify which limit you mean? For example, expense, travel, pricing, discount, or contractual limit?
+Latency: 0.0 sec
+Clarification: PASS
+
+STANDALONE QUESTION: How much tuition reimbursement can employees receive?
+
+SEARCH QUERIES: ['How much tuition reimbursement can employees receive?']
+
+======================================================================
+Q08 How much tuition reimbursement can employees receive?
+Answer: Employees may be reimbursed up to $5,250 per calendar year for job-related coursework and certifications, provided a grade of B or higher (or Pass for pass/fail) is achieved and the course is pre-approved by the employee's manager and People Operations [SOURCE_1].
+Latency: 9.83 sec
+Correctness: 2 / 2
+Grounding: 2 / 2
+Citation correctness: 2 / 2
+
+STANDALONE QUESTION: What was OrbitSuite Starter pricing in 2025?
+
+SEARCH QUERIES: ['What was OrbitSuite Starter pricing in 2025?']
+
+======================================================================
+Q09 What was OrbitSuite Starter pricing in 2025?
+Answer: OrbitSuite Starter was $29 per seat per month in 2025, with a 5-seat minimum. [SOURCE_1][SOURCE_2]
+Latency: 10.92 sec
+Correctness: 2 / 2
+Grounding: 2 / 2
+Citation correctness: 2 / 2
+
+STANDALONE QUESTION: OrbitSuite Starter plan pricing
+
+SEARCH QUERIES: ['OrbitSuite Starter plan pricing']
+
+======================================================================
+Q10 What about Starter?
+Answer: Starter is the entry tier. Key details:
+
+- Price: $32 per seat per month; minimum 5 seats [SOURCE_1].  
+- Support: Email support with a 2-business-day SLA [SOURCE_1].  
+- Core features: includes core workflow automation [SOURCE_4].  
+- Limits / missing features: API access is limited to 1k calls/month; no SSO; no custom reporting; no audit logs or data residency; no multi-region deployment [SOURCE_4].  
+- Uptime SLA: 99.5% [SOURCE_4].  
+- Note: 2026 list prices (including Starter) were increased ~8–10% vs. 2025 list prices [SOURCE_5].
+Latency: 16.18 sec
+Correctness: 2 / 2
+Grounding: 2 / 2
+Citation correctness: 2 / 2
+
+======================================================================
+FINAL EVALUATION RESULTS
+Average correctness: 2.00/2
+Average groundedness: 2.00/2
+Average citation correctness: 2.00/2
+No-answer accuracy: 0.00%
+Hallucination rate: 100.00%
+Ambiguous-query handling: 100.00%
+Average latency: 12.16 sec

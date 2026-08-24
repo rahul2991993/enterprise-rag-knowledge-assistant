@@ -1,0 +1,36 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Tooling and test artifacts
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# Generated files
+*.log
+dist/
+build/
+*.egg-info/
+
+data/embedding_cache.json
+data/KnowledgeBase/.DS_Store
+data/KnowledgeBase.zip
+
+.vscode/
+.idea/
