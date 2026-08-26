@@ -1,4 +1,5 @@
 import os
+import time
 
 from dotenv import load_dotenv
 from azure.core.credentials import AzureKeyCredential
@@ -29,8 +30,15 @@ def hybrid_search(
     current_only: bool = False
 ):
 
-    # 1. Generate embedding for vector search
+    # 1. Generate query embedding
+
+    embedding_start = time.perf_counter()
+
     query_vector = generate_embedding(query)
+
+    embedding_seconds = (
+        time.perf_counter() - embedding_start
+    )
 
     vector_query = VectorizedQuery(
         vector=query_vector,
@@ -39,21 +47,23 @@ def hybrid_search(
     )
 
     # 2. Optional metadata filter
+
     search_filter = None
 
     if current_only:
         search_filter = "is_current eq true"
 
     # 3. Hybrid search + semantic reranking
+
+    search_start = time.perf_counter()
+
     results = search_client.search(
         search_text=query,
         vector_queries=[vector_query],
         filter=search_filter,
-
         query_type="semantic",
         semantic_configuration_name="rag-semantic-config",
         query_caption="extractive",
-
         select=[
             "chunk_id",
             "document_name",
@@ -63,17 +73,40 @@ def hybrid_search(
             "effective_year",
             "is_current"
         ],
-
         top=top_k
     )
 
-    return list(results)
+    # Force Azure Search results to be consumed
+    # so search timing is measured correctly.
+    results = list(results)
+
+    search_seconds = (
+        time.perf_counter() - search_start
+    )
+
+    # 4. Print retrieval latency breakdown
+
+    print(
+        "\nRETRIEVAL BREAKDOWN:",
+        {
+            "embedding_seconds": round(
+                embedding_seconds,
+                3
+            ),
+            "search_seconds": round(
+                search_seconds,
+                3
+            )
+        }
+    )
+
+    return results
 
 
 def multi_query_search(
-        queries: list[str],
-        top_k_per_query: int = 3,
-        current_only: bool = False
+    queries: list[str],
+    top_k_per_query: int = 3,
+    current_only: bool = False
 ):
 
     combined_results = {}
@@ -91,14 +124,17 @@ def multi_query_search(
             chunk_id = result["chunk_id"]
 
             if chunk_id not in combined_results:
-
                 combined_results[chunk_id] = result
 
     return list(combined_results.values())
 
+
 if __name__ == "__main__":
 
-    query = "What is the client meal reimbursement limit?"
+    query = (
+        "What is the client meal "
+        "reimbursement limit?"
+    )
 
     results = hybrid_search(
         query=query,
@@ -108,7 +144,10 @@ if __name__ == "__main__":
     print("\nQUESTION:")
     print(query)
 
-    for rank, result in enumerate(results, start=1):
+    for rank, result in enumerate(
+        results,
+        start=1
+    ):
 
         print("\n" + "=" * 60)
 
@@ -121,18 +160,14 @@ if __name__ == "__main__":
 
         print(
             "RERANKER SCORE:",
-            result.get("@search.reranker_score")
+            result.get(
+                "@search.reranker_score"
+            )
         )
 
-        print(
-            "DOCUMENT:",
-            result["document_name"]
-        )
+        print("DOCUMENT:", result["document_name"])
 
-        print(
-            "SECTION:",
-            result["section"]
-        )
+        print("SECTION:", result["section"])
 
         print("\nCONTENT:")
         print(result["content"])

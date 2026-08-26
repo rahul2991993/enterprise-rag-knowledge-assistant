@@ -14,6 +14,26 @@ client = AzureOpenAI(
 )
 
 
+def needs_decomposition(question: str) -> bool:
+
+    query = question.lower()
+
+    decomposition_terms = [
+        "compare",
+        "difference",
+        "differences",
+        "versus",
+        " vs ",
+        "both",
+        "and"
+    ]
+
+    return any(
+        term in query
+        for term in decomposition_terms
+    )
+
+
 def decompose_query(question: str) -> list[str]:
 
     system_prompt = """

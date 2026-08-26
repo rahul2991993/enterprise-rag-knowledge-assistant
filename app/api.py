@@ -49,12 +49,21 @@ class UsageResponse(BaseModel):
     total_tokens: int = 0
 
 
+class TimingResponse(BaseModel):
+    rewrite_seconds: float = 0
+    decomposition_seconds: float = 0
+    retrieval_seconds: float = 0
+    generation_seconds: float = 0
+    total_seconds: float = 0
+
+
 class AskResponse(BaseModel):
     question: str
     rewritten_question: str | None = None
     answer: str
     sources: list[SourceResponse]
     usage: UsageResponse | None = None
+    timings: TimingResponse | None = None
 
 
 def serialize_sources(sources):
@@ -123,7 +132,10 @@ def ask_question(
             "sources": serialize_sources(
                 result.get("sources", [])
             ),
-            "usage": result.get("usage")
+            "usage": result.get("usage"),
+
+            # ADD THIS LINE
+            "timings": result.get("timings")
         }
 
     except Exception as exc:
